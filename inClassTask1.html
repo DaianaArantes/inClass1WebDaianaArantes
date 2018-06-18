@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--Daiana Arantes
+    Lixin Feng-->
+
+<html>
+	<head>
+		<title>In-Class Task 1</title>
+        <script>
+            var givenName;
+            var familyName;
+            var userName;
+            var nickName;
+
+            function PrintFullName() {
+
+                givenName = prompt('Enter your given name: ');
+                familyName = prompt('Enter your family name: ');
+                userName = givenName + "." + familyName;
+
+            }
+            function PrintNickName() {
+                nickName = prompt('Enter your nickname: ');
+            }
+
+            function DisplayName() {
+                document.getElementById("displayName").innerHTML = "Your username is " + userName +
+                    "<br/>" + "but we'll call you " + nickName;
+            }
+        </script>
+    </head>
+	<body>
+		<h1>Display your Name</h1>
+		<p>Click on the first button to input your given name and family name. Click on the second button to input yuor nickname</p>
+		<input type="button" onclick="PrintFullName()" value="Full Name" id="btnFullName"/>
+		<input type="button" onclick="PrintNickName(), DisplayName()" value="Nick Name" id="btnNickName"/>
+		<p id="displayName"></p>
+	</body>
+</html>
